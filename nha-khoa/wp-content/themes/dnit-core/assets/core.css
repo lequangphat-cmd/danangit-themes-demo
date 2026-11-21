@@ -1,0 +1,297 @@
+/* DNIT Core 0.3: CSS chung cho mọi mẫu. Màu, chữ, độ bo lấy từ kieu.json của mẫu. */
+:root{--dnit-bo:var(--wp--custom--bo,18px);--dnit-bo-nho:calc(var(--dnit-bo) * .66);--dnit-toi:var(--wp--preset--color--toi);--dnit-bong:0 18px 40px -22px color-mix(in srgb,var(--dnit-toi) 45%,transparent)}
+svg.lucide{fill:none;stroke:currentColor}
+body{-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+img{max-width:100%;height:auto}
+.wp-site-blocks>*+*{margin-block-start:0}
+.wp-block-post-content>.alignfull,.entry-content>.alignfull{margin-block-start:0}
+:where(.wp-site-blocks) :focus-visible{outline:2px solid var(--wp--preset--color--nhan);outline-offset:3px}
+
+/* Nút */
+.is-style-vien .wp-block-button__link{background:transparent;color:inherit;border:1px solid currentColor}
+.wp-element-button,.wp-block-button__link{transition:transform .2s,background .2s,box-shadow .2s}
+.wp-element-button:hover,.wp-block-button__link:hover{transform:translateY(-1px)}
+
+/* Chữ nhỏ trên tiêu đề */
+.dnit-nhan{font-size:1rem;font-weight:600;color:var(--wp--preset--color--nhan);margin:0}
+.dnit-dan{max-width:620px;margin-inline:auto}
+
+/* Hero */
+.dnit-hero{min-height:min(78vh,720px)!important;padding-top:80px!important;padding-bottom:90px!important}
+.dnit-hero .wp-block-cover__background{background:linear-gradient(90deg,color-mix(in srgb,var(--dnit-toi) 84%,transparent) 0%,color-mix(in srgb,var(--dnit-toi) 55%,transparent) 48%,color-mix(in srgb,var(--dnit-toi) 12%,transparent) 100%)!important;opacity:1!important}
+.dnit-hero .dnit-hero__mo{color:color-mix(in srgb,#fff 88%,var(--wp--preset--color--nhan-sang))}
+.wp-block-cover.dnit-hero .wp-block-cover__inner-container{width:100%!important;max-width:1200px;margin-inline:auto!important}
+.dnit-hero h1{font-size:clamp(2.6rem,6.2vw,5.2rem);line-height:1.05;letter-spacing:-.01em}
+.dnit-hero__danhgia{display:inline-flex;align-items:center;gap:.6rem;font-size:.95rem;margin:2rem 0 0}
+.dnit-hero .dnit-hero__danhgia{color:rgba(255,255,255,.88)}.dnit-hero .dnit-hero__danhgia b{color:#fff}
+.dnit-thongtin{position:relative;z-index:3;margin-top:-72px!important}
+.dnit-thongtin__khung{display:grid;grid-template-columns:repeat(3,1fr);background:var(--wp--preset--color--nen);border:1px solid var(--wp--preset--color--vien);border-radius:var(--dnit-bo);box-shadow:var(--dnit-bong);overflow:hidden}
+.dnit-thongtin__o{padding:1.4rem 1.6rem;display:flex;gap:1rem;align-items:center}
+.dnit-thongtin__o+.dnit-thongtin__o{border-left:1px solid var(--wp--preset--color--vien)}
+.dnit-o-icon{display:grid;place-items:center;width:44px;height:44px;flex:none;border-radius:50%;background:var(--wp--preset--color--nen-phu);color:var(--wp--preset--color--chinh)}
+.dnit-o-icon svg{width:22px;height:22px}
+.dnit-thongtin__o a{color:inherit}
+.dnit-thongtin__o small{display:block;color:var(--wp--preset--color--chu-phu);font-size:.85rem}
+.dnit-thongtin__o strong{font-weight:600;font-size:1.02rem}
+
+/* Dải chữ chạy */
+.dnit-chay{overflow:hidden;white-space:nowrap;border-block:1px solid var(--wp--preset--color--vien);padding:1.1rem 0;background:var(--wp--preset--color--nen)}
+.dnit-chay__day{display:inline-flex;gap:2.5rem;animation:dnit-chay 38s linear infinite;font-family:var(--wp--preset--font-family--tieu-de);font-size:1.6rem;color:var(--wp--preset--color--chinh)}
+.dnit-chay__day span{display:inline-flex;align-items:center;gap:2.5rem}
+.dnit-chay__day span::after{content:"";width:9px;height:9px;border-radius:50%;background:var(--wp--preset--color--nhan)}
+@keyframes dnit-chay{to{transform:translateX(-50%)}}
+
+/* Thẻ có ảnh */
+.dnit-the{background:var(--wp--preset--color--nen);border:1px solid var(--wp--preset--color--vien);border-radius:var(--dnit-bo);overflow:hidden;height:100%;display:flex;flex-direction:column;transition:transform .3s,box-shadow .3s}
+.dnit-the:hover{transform:translateY(-4px);box-shadow:var(--dnit-bong)}
+.dnit-the__anh{position:relative;aspect-ratio:4/3;overflow:hidden;margin:0}
+.dnit-the__anh img{width:100%;height:100%;object-fit:cover;transition:transform .6s}
+.dnit-the:hover .dnit-the__anh img{transform:scale(1.05)}
+.dnit-the__nhan{position:absolute;top:12px;left:12px;background:var(--wp--preset--color--nen);color:var(--wp--preset--color--chinh);font-size:.78rem;font-weight:600;padding:.3rem .7rem;border-radius:999px}
+.dnit-the__than{padding:1.2rem 1.3rem 1.4rem;display:flex;flex-direction:column;gap:.35rem;flex:1}
+.dnit-the__than h3{margin:0;font-size:1.3rem}
+.dnit-the__than p{margin:0;color:var(--wp--preset--color--chu-phu);font-size:.95rem;line-height:1.55}
+.dnit-the__gia{margin-top:auto!important;padding-top:.6rem;font-weight:700;color:var(--wp--preset--color--chinh)!important;font-size:1.05rem!important}
+.dnit-luoi{display:grid;gap:1.5rem;grid-template-columns:repeat(4,1fr);margin-top:2.4rem}
+.dnit-luoi--3{grid-template-columns:repeat(3,1fr)}.dnit-luoi--2{grid-template-columns:repeat(2,1fr)}
+
+/* Thực đơn có tab */
+.dnit-tab__nut{display:flex;gap:.5rem;justify-content:center;flex-wrap:wrap;margin:2rem 0 2.2rem}
+.dnit-tab__nut button{font:inherit;font-weight:500;padding:.6rem 1.3rem;border-radius:999px;border:1px solid var(--wp--preset--color--vien);background:var(--wp--preset--color--nen);color:var(--wp--preset--color--chu);cursor:pointer;transition:all .2s}
+.dnit-tab__nut button[aria-selected="true"]{background:var(--wp--preset--color--chinh);border-color:var(--wp--preset--color--chinh);color:#fff}
+.dnit-tab__khung{display:grid;grid-template-columns:5fr 7fr;gap:3rem;align-items:center}
+.dnit-tab__anh{border-radius:var(--dnit-bo);overflow:hidden;aspect-ratio:4/5;margin:0}
+.dnit-tab__anh img{width:100%;height:100%;object-fit:cover}
+.dnit-tab__trang[hidden]{display:none}
+.dnit-mon{display:flex;justify-content:space-between;gap:1rem;align-items:baseline;padding:1rem 0;border-bottom:1px dashed var(--wp--preset--color--vien);margin:0}
+.dnit-mon:first-child{padding-top:0}
+.dnit-mon strong{font-weight:600;font-size:1.08rem}
+.dnit-mon em{font-style:normal;font-size:.72rem;font-weight:600;color:var(--wp--preset--color--nhan);border:1px solid currentColor;border-radius:999px;padding:.1rem .5rem;margin-left:.5rem;vertical-align:2px}
+.dnit-mon small{display:block;color:var(--wp--preset--color--chu-phu);font-size:.9rem;font-weight:400;margin-top:.15rem}
+.dnit-mon span{white-space:nowrap;font-weight:700;color:var(--wp--preset--color--chinh)}
+
+/* Từ nông trại tới ly */
+.dnit-buoc{position:relative}
+.dnit-buoc__anh{aspect-ratio:3/4;border-radius:var(--dnit-bo);overflow:hidden;margin:0 0 1.2rem}
+.dnit-buoc__anh img{width:100%;height:100%;object-fit:cover}
+.dnit-buoc__so{font-family:var(--wp--preset--font-family--tieu-de);font-size:3rem;line-height:1;color:var(--wp--preset--color--nhan);opacity:.9;margin:0}
+.dnit-buoc h3{margin:.4rem 0 .3rem}
+.dnit-buoc p{margin:0;color:var(--wp--preset--color--chu-phu)}
+.dnit-luoi--buoc{gap:2rem}.dnit-luoi--buoc .dnit-buoc:nth-child(2){margin-top:3rem}
+
+/* Câu chuyện */
+.dnit-ghep{position:relative;padding-bottom:3rem}
+.dnit-ghep__lon{border-radius:var(--dnit-bo);overflow:hidden;aspect-ratio:4/5;width:78%;margin:0}
+.dnit-ghep__nho{position:absolute;right:0;bottom:0;width:48%;aspect-ratio:1;border-radius:var(--dnit-bo);overflow:hidden;border:8px solid var(--wp--preset--color--nen-phu);margin:0}
+.dnit-ghep img{width:100%;height:100%;object-fit:cover}
+.dnit-ghep__huy{position:absolute;left:62%;top:8%;width:118px;height:118px;border-radius:50%;background:var(--wp--preset--color--nhan);color:#fff;display:grid;place-items:center;text-align:center;font-size:.8rem;font-weight:600;line-height:1.25;box-shadow:var(--dnit-bong)}
+.dnit-ghep__huy b{display:block;font-family:var(--wp--preset--font-family--tieu-de);font-size:2rem}
+.dnit-so{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-top:1.8rem;padding-top:1.6rem;border-top:1px solid var(--wp--preset--color--vien)}
+.dnit-so b{display:block;font-family:var(--wp--preset--font-family--tieu-de);font-size:2.3rem;color:var(--wp--preset--color--chinh);line-height:1.1}
+.dnit-so small{color:var(--wp--preset--color--chu-phu);font-size:.9rem}
+
+/* Không gian */
+.dnit-anh-luoi{margin-top:2.4rem;display:grid;grid-template-columns:1.25fr 1fr 1fr;grid-template-rows:260px 260px;gap:1rem}
+.dnit-anh-luoi a{position:relative;border-radius:var(--dnit-bo);overflow:hidden;display:block}
+.dnit-anh-luoi a:first-child{grid-row:span 2}
+.dnit-anh-luoi a:nth-child(4){grid-column:span 2}
+.dnit-anh-luoi img{width:100%;height:100%;object-fit:cover;transition:transform .6s}
+.dnit-anh-luoi a:hover img{transform:scale(1.04)}
+.dnit-anh-luoi span{position:absolute;left:14px;bottom:14px;background:color-mix(in srgb,var(--dnit-toi) 55%,transparent);backdrop-filter:blur(4px);color:#fff;font-size:.88rem;font-weight:500;padding:.35rem .8rem;border-radius:999px}
+.dnit-hop{position:fixed;inset:0;z-index:100;background:color-mix(in srgb,var(--dnit-toi) 94%,transparent);display:grid;place-items:center;padding:1rem}
+.dnit-hop img{max-height:88vh;border-radius:var(--dnit-bo-nho)}
+.dnit-hop button{position:absolute;top:16px;right:16px;width:44px;height:44px;border-radius:50%;border:0;background:#fff;font-size:1.4rem;cursor:pointer}
+
+/* Hạt mang về */
+.dnit-hat{display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:center}
+.dnit-hat__anh{border-radius:var(--dnit-bo);overflow:hidden;aspect-ratio:1;margin:0}
+.dnit-hat__anh img{width:100%;height:100%;object-fit:cover}
+.dnit-hat__goi{display:grid;gap:.8rem;margin:1.5rem 0}
+.dnit-hat__goi div{display:flex;justify-content:space-between;align-items:center;padding:1rem 1.2rem;border:1px solid var(--wp--preset--color--vien);border-radius:var(--dnit-bo-nho);background:var(--wp--preset--color--nen)}
+.dnit-hat__goi b{font-weight:600}
+.dnit-hat__goi small{display:block;color:var(--wp--preset--color--chu-phu);font-size:.88rem}
+.dnit-hat__goi span{font-weight:700;color:var(--wp--preset--color--chinh)}
+
+/* Đánh giá */
+.dnit-dg{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);border-radius:var(--dnit-bo);padding:1.6rem;display:flex;flex-direction:column;gap:1rem}
+.dnit-dg p{margin:0;font-size:1.08rem;line-height:1.6}
+.dnit-dg__nguoi{display:flex;gap:.8rem;align-items:center;margin-top:auto}
+.dnit-dg__nguoi i{width:42px;height:42px;border-radius:50%;display:grid;place-items:center;font-style:normal;font-weight:700;background:var(--wp--preset--color--nhan);color:#fff}
+.dnit-dg__nguoi small{display:block;opacity:.75;font-size:.85rem}
+.dnit-sao{color:#F2A93B;letter-spacing:3px;font-size:1rem}
+.dnit-google{display:inline-flex;gap:.8rem;align-items:center;padding:.6rem 1rem;border-radius:999px;border:1px solid rgba(255,255,255,.2);font-size:.95rem}
+
+/* Tin tức */
+.dnit-tin .wp-block-post-featured-image{aspect-ratio:16/10;overflow:hidden;margin:0}
+.dnit-tin .wp-block-post-featured-image img{height:100%;object-fit:cover;transition:transform .6s}
+.dnit-tin li:hover .wp-block-post-featured-image img{transform:scale(1.04)}
+.dnit-tin .wp-block-post-title a{text-decoration:none;color:inherit}
+.dnit-tin .wp-block-post-title a:hover{color:var(--wp--preset--color--nhan)}
+
+/* Form */
+.dnit-form{display:grid;gap:1rem}
+.dnit-form label{display:grid;gap:.4rem;font-weight:500;font-size:.95rem}
+.dnit-form input,.dnit-form select,.dnit-form textarea{font:inherit;padding:.8rem .95rem;border:1px solid var(--wp--preset--color--vien);border-radius:var(--dnit-bo-nho);background:#fff;color:var(--wp--preset--color--chu);width:100%;box-sizing:border-box}
+.dnit-form input:focus,.dnit-form select:focus,.dnit-form textarea:focus{outline:2px solid var(--wp--preset--color--nhan);outline-offset:1px;border-color:transparent}
+.dnit-form__hang{display:grid;gap:1rem;grid-template-columns:1fr 1fr}
+.dnit-form__hang--3{grid-template-columns:1fr 1fr 1fr}
+.dnit-form button{border:0;cursor:pointer;width:100%}
+.dnit-bay{position:absolute;left:-9999px}
+.dnit-tb{padding:.8rem 1rem;border-radius:var(--dnit-bo-nho);font-weight:500}
+.dnit-tb--ok{background:#E8F5EC;color:#14532D}.dnit-tb--loi{background:#FDECEC;color:#7F1D1D}
+.dnit-hop-form{background:var(--wp--preset--color--nen);border:1px solid var(--wp--preset--color--vien);border-radius:var(--dnit-bo);padding:2rem;box-shadow:var(--dnit-bong)}
+.dnit-lien{display:grid;gap:1rem;margin:1.6rem 0}
+.dnit-lien div{display:flex;gap:.9rem;align-items:flex-start}
+.dnit-lien .dnit-o-icon{background:rgba(255,255,255,.1);color:var(--wp--preset--color--nhan-sang)}
+.dnit-lien p{margin:0;color:rgba(255,255,255,.92)}.dnit-lien a{color:inherit}
+.dnit-lien small{display:block;color:rgba(255,255,255,.65);font-size:.85rem}
+
+/* Banner trang con */
+.dnit-banner{min-height:420px!important}
+.dnit-banner .wp-block-cover__background{background:linear-gradient(0deg,color-mix(in srgb,var(--dnit-toi) 78%,transparent),color-mix(in srgb,var(--dnit-toi) 38%,transparent))!important;opacity:1!important}
+
+/* Hỏi đáp */
+.dnit-hoi details{border-bottom:1px solid var(--wp--preset--color--vien);padding:1.1rem 0}
+.dnit-hoi summary{cursor:pointer;font-weight:600;font-size:1.08rem;list-style:none;display:flex;justify-content:space-between;gap:1rem}
+.dnit-hoi summary::after{content:"+";font-size:1.4rem;line-height:1;color:var(--wp--preset--color--nhan)}
+.dnit-hoi details[open] summary::after{content:"-"}
+.dnit-hoi p{margin:.7rem 0 0;color:var(--wp--preset--color--chu-phu)}
+
+/* Dòng thời gian */
+.dnit-moc{display:grid;grid-template-columns:repeat(4,1fr);gap:1.5rem;position:relative}
+.dnit-moc::before{content:"";position:absolute;left:0;right:0;top:9px;height:1px;background:var(--wp--preset--color--vien)}
+.dnit-moc div{position:relative;padding-top:2rem}
+.dnit-moc div::before{content:"";position:absolute;top:2px;left:0;width:15px;height:15px;border-radius:50%;background:var(--wp--preset--color--nhan);box-shadow:0 0 0 5px var(--wp--preset--color--nen)}
+.dnit-moc b{font-family:var(--wp--preset--font-family--tieu-de);font-size:1.6rem;color:var(--wp--preset--color--chinh)}
+.dnit-moc p{margin:.3rem 0 0;color:var(--wp--preset--color--chu-phu);font-size:.95rem}
+
+/* Chân trang */
+
+/* Thanh liên hệ điện thoại */
+.dnit-thanh{display:none}
+
+/* Hiệu ứng hiện dần */
+.dnit-hien{opacity:0;transform:translateY(24px);transition:opacity .8s ease,transform .8s ease}
+.dnit-hien.da-hien{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.dnit-hien{opacity:1;transform:none;transition:none}.dnit-chay__day{animation:none}*{scroll-behavior:auto!important}}
+html{scroll-behavior:smooth;scroll-padding-top:90px}
+
+@media (max-width:1024px){.dnit-luoi--4{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:781px){
+ .dnit-thongtin__khung{grid-template-columns:1fr}
+ .dnit-thongtin__o+.dnit-thongtin__o{border-left:0;border-top:1px solid var(--wp--preset--color--vien)}
+ .dnit-thongtin__o{padding:1rem 1.2rem}
+ .dnit-tab__khung,.dnit-hat{grid-template-columns:1fr;gap:1.6rem}
+ .dnit-tab__anh{aspect-ratio:16/10}
+ .dnit-luoi--3,.dnit-luoi--2,.dnit-luoi--buoc{grid-template-columns:1fr}
+ .dnit-luoi--buoc .dnit-buoc:nth-child(2){margin-top:0}
+ .dnit-buoc__anh{aspect-ratio:16/10}
+ .dnit-anh-luoi{grid-template-columns:1fr 1fr;grid-template-rows:200px 160px 160px}
+ .dnit-anh-luoi a:first-child{grid-column:span 2;grid-row:auto}
+ .dnit-anh-luoi a:nth-child(4){grid-column:span 2}
+ .dnit-moc{grid-template-columns:1fr 1fr}
+ .dnit-moc::before{display:none}
+ .dnit-chay__day{font-size:1.25rem}
+ .dnit-hero{min-height:560px!important;padding-top:56px!important;padding-bottom:64px!important}
+ .dnit-so b{font-size:1.8rem}
+ .dnit-thanh{display:grid;grid-template-columns:1fr 1fr 1.4fr;position:fixed;left:0;right:0;bottom:0;z-index:70;background:var(--wp--preset--color--nen);border-top:1px solid var(--wp--preset--color--vien);box-shadow:0 -8px 24px -16px rgba(0,0,0,.3);padding-bottom:env(safe-area-inset-bottom)}
+ .dnit-thanh a{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;padding:.55rem 0;font-size:.8rem;font-weight:600;color:var(--wp--preset--color--chinh);text-decoration:none}
+ .dnit-thanh svg{width:20px;height:20px}
+ .dnit-thanh__chinh{background:var(--wp--preset--color--nhan);color:#fff!important;font-size:1rem!important;flex-direction:row!important}
+ body{padding-bottom:60px}
+ .dnit-an-dt{display:none!important}
+}
+@media (max-width:560px){.dnit-luoi--4{grid-template-columns:1fr 1fr;gap:.9rem}.dnit-the__than{padding:.9rem}.dnit-the__than h3{font-size:1.05rem}.dnit-the__than p{display:none}.dnit-form__hang,.dnit-form__hang--3{grid-template-columns:1fr}.dnit-hop-form{padding:1.3rem}}
+
+/* 0.3: khối mới */
+.dnit-mo-ta{color:var(--wp--preset--color--chu-phu);font-size:1.08rem}
+.dnit-nen-toi .dnit-mo-ta,.dnit-lien-he .dnit-mo-ta{color:rgba(255,255,255,.82)}
+.dnit-dau-hang .dnit-mo-ta{margin-top:.6rem}
+.dnit-xem-them{margin:0}.dnit-xem-them a{font-weight:600;text-decoration:none}
+.dnit-dan__giua{display:flex;justify-content:center;margin-top:1rem}
+.dnit-nhan.has-nhan-sang-color{color:var(--wp--preset--color--nhan-sang)}
+.dnit-nut-vien{background:transparent!important;color:var(--wp--preset--color--chinh)!important;border:1px solid var(--wp--preset--color--vien)!important}
+
+/* Hero chia đôi */
+.dnit-hero-doi{padding-top:clamp(3rem,6vw,5.5rem)!important;padding-bottom:clamp(5rem,9vw,7.5rem)!important;overflow:hidden}
+.dnit-hero-doi h1{font-size:clamp(2.4rem,5vw,4.2rem);line-height:1.08;letter-spacing:-.01em}
+.dnit-hero-doi .dnit-hero__mo{color:var(--wp--preset--color--chu-phu)}
+.dnit-hero-doi__anh{position:relative;margin:0}
+.dnit-hero-doi__anh img{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:calc(var(--dnit-bo) * 2) calc(var(--dnit-bo) * 2) var(--dnit-bo) calc(var(--dnit-bo) * 2);display:block}
+.dnit-hero-doi__noi{position:absolute;left:-8%;bottom:10%;display:flex;gap:.8rem;align-items:center;background:var(--wp--preset--color--nen);border:1px solid var(--wp--preset--color--vien);border-radius:var(--dnit-bo);padding:.9rem 1.2rem;box-shadow:var(--dnit-bong)}
+.dnit-hero-doi__noi p{margin:0;line-height:1.3}.dnit-hero-doi__noi b{display:block;font-size:1.15rem}.dnit-hero-doi__noi small{color:var(--wp--preset--color--chu-phu);font-size:.85rem}
+.dnit-hero-doi+.dnit-thongtin{margin-top:-46px!important}
+
+/* Ô biểu tượng */
+.dnit-icon-o{background:var(--wp--preset--color--nen);border:1px solid var(--wp--preset--color--vien);border-radius:var(--dnit-bo);padding:1.8rem 1.6rem}
+.has-nen-background-color .dnit-icon-o,.dnit-icon-luoi.dnit-icon-luoi--phang .dnit-icon-o{background:var(--wp--preset--color--nen-phu);border-color:transparent}
+.dnit-o-icon--lon{width:56px;height:56px;border-radius:var(--dnit-bo-nho);background:color-mix(in srgb,var(--wp--preset--color--nhan) 14%,transparent);color:var(--wp--preset--color--nhan)}
+.dnit-o-icon--lon svg{width:28px;height:28px}
+.dnit-icon-o h3{margin:1.2rem 0 .4rem;font-size:1.25rem}
+.dnit-icon-o p{margin:0;color:var(--wp--preset--color--chu-phu);font-size:.98rem}
+
+/* Bảng giá gói */
+.dnit-goi-luoi{align-items:stretch}
+.dnit-goi{position:relative;display:flex;flex-direction:column;background:var(--wp--preset--color--nen);border:1px solid var(--wp--preset--color--vien);border-radius:var(--dnit-bo);padding:2rem 1.8rem}
+.dnit-goi--noi{border:2px solid var(--wp--preset--color--nhan);box-shadow:var(--dnit-bong)}
+.dnit-goi__nhan{position:absolute;top:-14px;left:1.8rem;background:var(--wp--preset--color--nhan);color:#fff;font-size:.78rem;font-weight:600;padding:.3rem .8rem;border-radius:999px}
+.dnit-goi h3{margin:0;font-size:1.35rem}
+.dnit-goi__mt{margin:.4rem 0 0;color:var(--wp--preset--color--chu-phu);font-size:.95rem}
+.dnit-goi__gia{margin:1.2rem 0;padding-bottom:1.2rem;border-bottom:1px solid var(--wp--preset--color--vien)}
+.dnit-goi__gia b{font-family:var(--wp--preset--font-family--tieu-de);font-size:2.2rem;color:var(--wp--preset--color--chinh);line-height:1}
+.dnit-goi__gia small{margin-left:.4rem;color:var(--wp--preset--color--chu-phu)}
+.dnit-goi ul{list-style:none;margin:0 0 1.6rem;padding:0;display:grid;gap:.7rem;flex:1}
+.dnit-goi li{display:flex;gap:.6rem;align-items:flex-start;font-size:.98rem}
+.dnit-goi li svg{width:18px;height:18px;flex:none;margin-top:4px;color:var(--wp--preset--color--nhan)}
+.dnit-goi .wp-element-button{text-align:center;text-decoration:none}
+.dnit-goi__ghi{text-align:center;color:var(--wp--preset--color--chu-phu);font-size:.92rem;margin-top:1.6rem}
+
+/* Bước đánh số */
+.dnit-buoc-so{list-style:none;padding:0;margin:2.6rem 0 0;display:grid;grid-template-columns:repeat(4,1fr);gap:1.5rem;position:relative}
+.dnit-buoc-so--3{grid-template-columns:repeat(3,1fr)}.dnit-buoc-so--5{grid-template-columns:repeat(5,1fr)}
+.dnit-buoc-so::before{content:"";position:absolute;top:27px;left:8%;right:8%;border-top:1px dashed var(--wp--preset--color--vien)}
+.dnit-buoc-so li{position:relative;text-align:center;padding:0 .5rem}
+.dnit-buoc-so__so{display:grid;place-items:center;width:56px;height:56px;margin:0 auto 1rem;border-radius:50%;background:var(--wp--preset--color--chinh);color:#fff;font-weight:700;font-size:1.25rem;box-shadow:0 0 0 8px var(--wp--preset--color--nen)}
+.has-nen-phu-background-color .dnit-buoc-so__so{box-shadow:0 0 0 8px var(--wp--preset--color--nen-phu)}
+.dnit-buoc-so h3{margin:0 0 .4rem;font-size:1.2rem}
+.dnit-buoc-so p{margin:0;color:var(--wp--preset--color--chu-phu);font-size:.96rem}
+
+/* Đội ngũ */
+.dnit-nguoi{margin:0}
+.dnit-nguoi__anh{aspect-ratio:4/5;border-radius:var(--dnit-bo);overflow:hidden;background:var(--wp--preset--color--nen-phu)}
+.dnit-nguoi__anh img{width:100%;height:100%;object-fit:cover;transition:transform .6s}
+.dnit-nguoi:hover img{transform:scale(1.04)}
+.dnit-nguoi h3{margin:1rem 0 .1rem;font-size:1.25rem}
+.dnit-nguoi__vai{margin:0;color:var(--wp--preset--color--nhan);font-weight:600;font-size:.9rem}
+.dnit-nguoi p:not(.dnit-nguoi__vai){margin:.5rem 0 0;color:var(--wp--preset--color--chu-phu);font-size:.95rem}
+
+/* Đánh giá nền sáng */
+.dnit-dg-sang .dnit-dg{background:var(--wp--preset--color--nen);border:1px solid var(--wp--preset--color--vien);color:var(--wp--preset--color--chu)}
+.dnit-dg-sang .dnit-dg__nguoi small{color:var(--wp--preset--color--chu-phu);opacity:1}
+.dnit-dg blockquote{margin:0}
+.has-nen-phu-background-color .dnit-google,.dnit-dan .dnit-google{border-color:var(--wp--preset--color--vien);background:var(--wp--preset--color--nen)}
+
+/* Giới thiệu đảo chiều */
+.dnit-dao{flex-direction:row-reverse}
+
+/* Chân trang */
+
+/* Liên hệ */
+.dnit-lien-he .wp-block-cover__background{opacity:.86!important}
+
+@media (max-width:1024px){.dnit-buoc-so,.dnit-buoc-so--5{grid-template-columns:repeat(2,1fr);row-gap:2.2rem}.dnit-buoc-so::before{display:none}}
+@media (max-width:781px){
+ .dnit-hero-doi__noi{left:.8rem;bottom:.8rem}
+ .dnit-hero-doi__anh img{aspect-ratio:4/3.4}
+ .dnit-dao{flex-direction:column}
+ .dnit-goi--noi{order:-1}
+}
+@media (max-width:560px){.dnit-buoc-so,.dnit-buoc-so--3,.dnit-buoc-so--5{grid-template-columns:1fr}.dnit-nguoi-luoi{grid-template-columns:1fr 1fr!important;gap:1rem}.dnit-nguoi p:not(.dnit-nguoi__vai){display:none}}
+@media (max-width:560px){
+ .dnit-luoi.dnit-goi-luoi,.dnit-luoi.dnit-icon-luoi{grid-template-columns:minmax(0,1fr)}
+ .dnit-icon-luoi{gap:.75rem}
+ .dnit-icon-o{display:grid;grid-template-columns:auto 1fr;column-gap:1rem;padding:1.1rem}
+ .dnit-icon-o .dnit-o-icon{grid-row:span 2}
+ .dnit-icon-o h3{margin:0 0 .25rem;font-size:1.1rem}
+ .dnit-so b,.dnit-so strong{white-space:nowrap;font-size:clamp(1.35rem,6.4vw,2rem)}
+}
